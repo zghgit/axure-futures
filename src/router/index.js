@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/views/Home';
 import Page1 from '@/views/futures/Page1';
 import Page2 from '@/views/futures/Page2';
+import Coefficient from '@/views/futures/coefficient';
 
 
 // import HelloWorld from '@/components/HelloWorld';
@@ -48,7 +49,7 @@ export default new Router({
             icon: 'el-icon-setting',
             children: [
                 {path: 'page1', name: '画像', icon: 'el-icon-tickets', component: Page1},
-                {path: 'page2', name: '相关系数识别', icon: 'el-icon-document', component: Page2}
+                {path: 'coefficient', name: '相关系数识别', icon: 'el-icon-document', component: Coefficient}
             ]
         }
         // {
