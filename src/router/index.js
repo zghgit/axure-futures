@@ -1,10 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Login from '@/views/Login';
 import Home from '@/views/Home';
-import Database from '@/views/sys/database/Database';
-import Dictionary from '@/views/sys/config/Dictionary';
-import Blog from '@/views/usr/dreamersky/Blog';
+import Page1 from '@/views/futures/Page1';
+import Page2 from '@/views/futures/Page2';
+
 
 // import HelloWorld from '@/components/HelloWorld';
 
@@ -48,36 +47,19 @@ export default new Router({
             component: Home,
             icon: 'el-icon-setting',
             children: [
-                {path: 'database', name: '数据库', icon: 'el-icon-tickets', component: Database},
-                {path: 'log', name: '日志', icon: 'el-icon-document', component: Database},
-                {path: 'file', name: '文件管理', icon: 'el-icon-document', component: Database},
-                {
-                    path: 'config',
-                    name: '设置',
-                    component: Root,
-                    icon: 'el-icon-setting',
-                    children: [
-                        {path: 'dictionary', name: '常规', icon: 'el-icon-document', component: Dictionary},
-                        {path: 'dictionary', name: '字典', icon: 'el-icon-document', component: Dictionary}
-                    ]
-                }
+                {path: 'page1', name: '画像', icon: 'el-icon-tickets', component: Page1},
+                {path: 'page2', name: '相关系数识别', icon: 'el-icon-document', component: Page2}
             ]
-        },
-        {
-            path: '',
-            name: 'Dreamersky',
-            component: Home,
-            icon: 'el-icon-mobile-phone',
-            children: [
-                {path: 'blog', name: '博客', icon: 'el-icon-tickets', component: Blog},
-                {path: 'photo', name: '相册', icon: 'el-icon-picture', component: Database}
-            ]
-        },
-        {
-            path: '/login',
-            name: '登陆',
-            hidden: true,
-            component: Login
         }
+        // {
+        //     path: '',
+        //     name: 'Dreamersky',
+        //     component: Home,
+        //     icon: 'el-icon-mobile-phone',
+        //     children: [
+        //         {path: 'blog', name: '博客', icon: 'el-icon-tickets', component: Blog},
+        //         {path: 'photo', name: '相册', icon: 'el-icon-picture', component: Database}
+        //     ]
+        // }
     ]
 });
