@@ -1,6 +1,6 @@
 <template>
     <header>
-        logo
+        <img src="../../assets/img/logo.jpg" alt="">
     </header>
 </template>
 
@@ -12,7 +12,11 @@
 
 <style lang="less" scoped>
     header {
-        height: 50px;
-        background-color: #ddd;
+        background-color: #fff;
+        
+        img {
+            height: 80px;
+            margin: 10px 20px;
+        }
     }
 </style>

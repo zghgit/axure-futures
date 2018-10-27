@@ -69,13 +69,15 @@
                 </el-col>
             </el-row>
         </el-form>
+        <create :visible="dialogVisible" @close="handleClose"></create>
     </div>
 </template>
 
 <script>
+    import create from '@/components/coefficient/create/index'
     export default {
         name: 'Coefficient',
-        components: {},
+        components: {create},
         data() {
             return {
                 form: {
@@ -91,6 +93,7 @@
                 },
                 startDate: '',
                 endDate: '',
+                dialogVisible: false
             };
         },
         computed: {
@@ -105,7 +108,12 @@
             // 新增识别指标
             addDiscernIndexClick() {},
             // 新增场景
-            addSceneClick() {},
+            addSceneClick() {
+                this.dialogVisible = true;
+            },
+            handleClose() {
+                this.dialogVisible = false;
+            }
         }
     }
 </script>

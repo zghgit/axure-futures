@@ -63,12 +63,12 @@ export default new Router({
             icon: 'el-icon-setting',
             children: [
                 {path: 'x21', name: '关联账户', icon: 'el-icon-tickets', component: Test},
-                {path: 'x22', name: '相关系数', icon: 'el-icon-document', component: Root},
+                {path: 'x22', name: '相关系数', icon: 'el-icon-document', component: Coefficient},
                 {path: 'x27', name: '异常交易分析', icon: 'el-icon-document', component: Root},
                 {path: 'x28', name: '组合分析', icon: 'el-icon-document', component: Root},
                 {path: 'x29', name: '画像服务', icon: 'el-icon-document', component: Root},
                 {path: 'x291', name: '账户画像', icon: 'el-icon-document', component: Root},
-                {path: 'x292', name: '账户组画像', icon: 'el-icon-document', component: Root}
+                {path: 'x292', name: '账户组画像', icon: 'el-icon-document', component: PortraitCharts}
             ]
         },
         {

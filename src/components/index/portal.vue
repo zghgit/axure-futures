@@ -57,7 +57,7 @@
     export default {
         methods: {
             handle() {
-                this.$router.push({ path: 'home' })
+                this.$router.push({ path: 'x2/x22' })
             }
         }
     }

@@ -194,13 +194,13 @@ import model from '@/components/coefficient/create/model'
 
     export default {
         props: {
-            visible: { type: Boolean, default: true }
+            visible: { type: Boolean, default: false }
         },
         components: { model },
         data() {
             return {
-                dialogVisible: true,
-                modelVisible: true,
+                dialogVisible: false,
+                modelVisible: false,
                 form: {
                     name: '',
                     date: ''

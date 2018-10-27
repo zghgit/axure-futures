@@ -86,11 +86,11 @@
 <script>
     export default {
         props: {
-            visible: { type: Boolean, default: true }
+            visible: { type: Boolean, default: false }
         },
         data() {
             return {
-                dialogVisible: true,
+                dialogVisible: false,
                 tableData: [
                     { id:1, name: '买入成交', bool: false, relation: '', value: '' },
                     { id:2, name: '卖出成交', bool: false, relation: '', value: '' },
