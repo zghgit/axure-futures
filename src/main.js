@@ -3,18 +3,15 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
+import './assets/style/index.css';
 import App from './App';
 import router from './router';
 import store from './store';
 import echarts from 'echarts';
 
 Vue.config.productionTip = false;
-Vue.prototype.$echarts = echarts
+Vue.prototype.$echarts = echarts;
 Vue.use(ElementUI);
-
-Vue.prototype.$echarts = echarts
-
-
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
