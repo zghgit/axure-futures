@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '@/views/Index';
 import Home from '@/views/Home';
-import Page1 from '@/views/futures/Page1';
+import PortraitCharts from '@/views/futures/portraitCharts';
 import Page2 from '@/views/futures/Page2';
 import Coefficient from '@/views/futures/Coefficient';
 import Test from '@/views/futures/Test';

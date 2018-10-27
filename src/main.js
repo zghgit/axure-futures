@@ -6,9 +6,10 @@ import ElementUI from 'element-ui';
 import App from './App';
 import router from './router';
 import store from './store';
+import echarts from 'echarts'
 
 Vue.config.productionTip = false;
-
+Vue.prototype.$echarts = echarts
 Vue.use(ElementUI);
 
 /* eslint-disable no-new */
