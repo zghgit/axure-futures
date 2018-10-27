@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home';
-import Page1 from '@/views/futures/Page1';
+import PortraitCharts from '@/views/futures/portraitCharts';
 import Page2 from '@/views/futures/Page2';
 
 
@@ -47,7 +47,7 @@ export default new Router({
             component: Home,
             icon: 'el-icon-setting',
             children: [
-                {path: 'page1', name: '画像', icon: 'el-icon-tickets', component: Page1},
+                {path: 'page1', name: '画像', icon: 'el-icon-tickets', component: PortraitCharts},
                 {path: 'page2', name: '相关系数识别', icon: 'el-icon-document', component: Page2}
             ]
         }
