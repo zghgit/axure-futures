@@ -56,6 +56,7 @@
                         data: ['相关程度', '持仓量等级']
                     },
                     xAxis: {
+                        name: '持仓量等级',
                         splitLine: {
                             lineStyle: {
                                 type: 'dashed'
@@ -63,6 +64,7 @@
                         }
                     },
                     yAxis: {
+                        name: '相关程度',
                         splitLine: {
                             lineStyle: {
                                 type: 'dashed'
@@ -71,7 +73,7 @@
                         scale: true
                     },
                     series: [{
-                        name: '相关程度',
+                        name: '',
                         data: data[0],
                         type: 'scatter',
                         symbolSize: function(data) {
@@ -101,7 +103,7 @@
                             }
                         }
                     }, {
-                        name: '持仓量等级',
+                        name: '',
                         data: data[1],
                         type: 'scatter',
                         symbolSize: function(data) {
@@ -166,7 +168,7 @@
     },
     xAxis: {
         type: 'category',
-        data: ['周一','周二','周三','周四','周五','周六','周日']
+        data: ['周一','周二','周三','周四','周五']
     },
     series: [
         {
@@ -179,7 +181,7 @@
                     position: 'insideRight'
                 }
             },
-            data: [320, 302, 301, 334, 390, 330, 320]
+            data: [320, 302, 301, 334, 390]
         },
         {
             name: '账户2',
@@ -191,7 +193,7 @@
                     position: 'insideRight'
                 }
             },
-            data: [120, 132, 101, 134, 90, 230, 210]
+            data: [120, 132, 101, 134, 90]
         },
         {
             name: '账户3',
@@ -203,7 +205,7 @@
                     position: 'insideRight'
                 }
             },
-            data: [220, 182, 191, 234, 290, 330, 310]
+            data: [220, 182, 191, 234, 290]
         }
     ]
 };
