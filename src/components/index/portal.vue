@@ -17,7 +17,7 @@
                 <el-card :body-style="{ padding: '0px' }" shadow="hover" class="card">
                     <div class="circle circle2"></div>
                     <div style="padding: 14px;">
-                        <span>数据分析工具</span>
+                        <span>监管科技工具集</span>
                         <div class="tips clearfix">描述</div>
                         <div class="bottom clearfix">
                             <el-button type="text" class="button" @click="handle()">进入</el-button>
@@ -29,7 +29,7 @@
                 <el-card :body-style="{ padding: '0px' }" shadow="hover" class="card">
                     <div class="circle circle3"></div>
                     <div style="padding: 14px;">
-                        <span>配置管理</span>
+                        <span>行业应用</span>
                         <div class="tips clearfix">描述</div>
                         <div class="bottom clearfix">
                             <el-button type="text" class="button" @click="handle()">进入</el-button>
@@ -41,7 +41,7 @@
                 <el-card :body-style="{ padding: '0px' }" shadow="hover" class="card">
                     <div class="circle circle4"></div>
                     <div style="padding: 14px;">
-                        <span>任务管理</span>
+                        <span>国际化应用</span>
                         <div class="tips clearfix">描述</div>
                         <div class="bottom clearfix">
                             <el-button type="text" class="button" @click="handle()">进入</el-button>

@@ -54,7 +54,8 @@
 <style lang='less' scoped>
     .portrait {
         .halfWidth {
-            width: 598px;
+            width: 48%;
+            margin: 0 5px !important;
             display: inline-block;
         }
         /deep/ .title {

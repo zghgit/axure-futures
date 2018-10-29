@@ -36,6 +36,7 @@
                     //     left:'center'
                     // },
                     tooltip: {},
+                    width: '100%',
                     radar: {
                         // shape: 'circle',
                         indicator: [
