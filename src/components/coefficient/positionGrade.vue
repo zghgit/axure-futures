@@ -101,6 +101,24 @@
                                     color: 'rgb(204, 46, 72)'
                                 }])
                             }
+                        },
+                        markLine: {
+                            itemStyle: {
+                                normal: {
+                                    lineStyle: {
+                                        type: 'dashed', color: 'red'
+                                    }
+                                }
+                            },
+                            label: {
+                                formatter: '限仓线'
+                            },
+                            data: [
+                                {
+                                    name: '限仓线',
+                                    xAxis: 30000
+                                },
+                            ]
                         }
                     }, {
                         name: '',
@@ -136,79 +154,88 @@
                 };
 
                 splashesId.setOption(option);
+
+                splashesId.on('click', (params) => {
+                    // console.log(params);
+                    // this.barChartData();
+                    let option1 = window.barChartId.getOption();
+                    window.barChartId.clear();
+                    window.barChartId.setOption(option1);
+                    // this.candlestickData();
+                });
             },
             barChartData() {
-                let barChartId = this.$echarts.init(document.getElementById('barChart'));
+                window.barChartId = this.$echarts.init(document.getElementById('barChart'));
                
                 let option = {
                     title: {
-                text: '持仓情况'
-            },
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    legend: {
-       
-        data: ['账户1', '账户2','账户3'],
-        textStyle:{    //图例文字的样式
-            fontSize:14
-        }
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    yAxis:  {
-        type: 'value'
-    },
-    xAxis: {
-        type: 'category',
-        data: ['周一','周二','周三','周四','周五']
-    },
-    series: [
-        {
-            name: '账户1',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [320, 302, 301, 334, 390]
-        },
-        {
-            name: '账户2',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [120, 132, 101, 134, 90]
-        },
-        {
-            name: '账户3',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [220, 182, 191, 234, 290]
-        }
-    ]
-};
+                        text: '持仓情况'
+                    },
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    legend: {
+                    
+                        data: ['账户1', '账户2','账户3'],
+                        textStyle:{    //图例文字的样式
+                            fontSize:14
+                        }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    yAxis:  {
+                        type: 'value'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['周一','周二','周三','周四','周五']
+                    },
+                    series: [
+                        {
+                            name: '账户1',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'insideRight'
+                                }
+                            },
+                            data: [320, 302, 301, 334, 390]
+                        },
+                        {
+                            name: '账户2',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'insideRight'
+                                }
+                            },
+                            data: [120, 132, 101, 134, 90]
+                        },
+                        {
+                            name: '账户3',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'insideRight'
+                                }
+                            },
+                            data: [220, 182, 191, 234, 290]
+                        }
+                    ]
+                };
                 barChartId.setOption(option);
             },
             candlestickData() {

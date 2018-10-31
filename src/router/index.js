@@ -58,45 +58,25 @@ export default new Router({
         },
         {
             path: '/x2',
-            name: '数据分析工具',
+            name: '监管科技工具集',
             component: Home,
             icon: 'el-icon-setting',
             children: [
-                {path: 'x21', name: '关联账户', icon: 'el-icon-tickets', component: Test},
-                {path: 'x22', name: '相关系数', icon: 'el-icon-document', component: Coefficient},
+                {
+                    path: 'x21',
+                    name: '关联账户',
+                    icon: 'el-icon-tickets',
+                    component: Root,
+                    children: [
+                        {path: 'x22', name: '相关系数', icon: 'el-icon-document', component: Coefficient}
+                    ]
+                },
+                
                 {path: 'x27', name: '异常交易分析', icon: 'el-icon-document', component: Root},
                 {path: 'x28', name: '组合分析', icon: 'el-icon-document', component: Root},
-                {path: 'x29', name: '画像服务', icon: 'el-icon-document', component: Root},
                 {path: 'x291', name: '账户画像', icon: 'el-icon-document', component: Root},
                 {path: 'x292', name: '账户组画像', icon: 'el-icon-document', component: PortraitCharts}
             ]
-        },
-        {
-            path: '/x3',
-            name: '配置管理',
-            component: Home,
-            icon: 'el-icon-setting',
-            children: [
-                {path: 'x31', name: '指标配置管理', icon: 'el-icon-tickets', component: Root},
-                {path: 'x32', name: '模型配置管理', icon: 'el-icon-document', component: Root},
-                {path: 'x23', name: '场景配置管理', icon: 'el-icon-document', component: Root},
-                {path: 'x24', name: '结果集管理', icon: 'el-icon-document', component: Root}
-            ]
-        },
-        {
-            path: '/x4',
-            name: '任务管理',
-            component: Home,
-            icon: 'el-icon-setting',
-            children: [
-                {path: 'x41', name: '关联账户稽查任务', icon: 'el-icon-tickets', component: Root}
-            ]
-        },
-        {
-            path: '/x5',
-            name: '系统关联管理',
-            component: Home,
-            icon: 'el-icon-setting'
         }
         // {
         //     path: '/home',

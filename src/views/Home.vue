@@ -1,9 +1,9 @@
 <template>
     <el-container class="app-container">
-        <el-header>header</el-header>
+        <el-header>科技监管平台</el-header>
         <el-container>
-            <el-aside>
-                <el-menu router>
+            <el-aside width="200px">
+                <el-menu router  :collapse="isCollapse">
                     <template v-for="(item, index) in $router.options.routes">
 
                         <!-- 无二级子节点 -->
@@ -39,10 +39,10 @@
             </el-aside>
             <el-main>
                 <el-col :span="24" class="breadcrumb">
-                    <strong class="title">{{$route.name}}</strong>
                     <el-breadcrumb separator="/" class="breadcrumb-inner">
                         <el-breadcrumb-item v-for="item in $route.matched" :key="item.path">{{ item.name }}</el-breadcrumb-item>
                     </el-breadcrumb>
+                    <strong class="title">{{$route.name}}</strong>
                 </el-col>
                 <transition name="fade" mode="out-in">
                     <router-view/>
@@ -53,7 +53,13 @@
 </template>
 
 <script>
-    export default { };
+    export default {
+        data() {
+            return {
+                isCollapse: false
+            }
+        }
+    };
 </script>
 
 <style lang="less">
@@ -73,7 +79,7 @@
     >section {
 
         >aside {
-            flex: 0 0 200px;
+            // flex: 0 0 200px;
 
             >ul {
                 height: 100%;

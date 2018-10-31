@@ -57,7 +57,7 @@
     export default {
         methods: {
             handle() {
-                this.$router.push({ path: 'x2/x22' })
+                this.$router.push({ name: '相关系数' })
             }
         }
     }
