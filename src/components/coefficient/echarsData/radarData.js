@@ -716,7 +716,7 @@ export default {
             }
             let option = {
                 title: {
-                    text:  "分时图",
+                    text:  "",
                     left: 0
                 },
                 tooltip: {

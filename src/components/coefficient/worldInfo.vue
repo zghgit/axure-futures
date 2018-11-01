@@ -64,10 +64,10 @@
                 </el-col>
                 <el-col :span="24" class="function">
                      <el-col :span="7">
-                        <el-form-item label="前" prop="account"> 
+                        <!-- <el-form-item label="前" prop="account"> 
                             <el-input style="width:30%" v-model="form.account" placeholder="请输账户数"></el-input>
                         <span>个账户</span>
-                        </el-form-item>
+                        </el-form-item> -->
                     </el-col>
                     <el-col  :span="7">
                         <el-button type="success" @click="amendClick" size="small">修改</el-button>

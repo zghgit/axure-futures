@@ -11,13 +11,19 @@
               </dir> -->
           <div class="echarsBox">
               <!--散点图-->
-              <div v-if="splashes" class="graph" id="splashes"></div>
-              <div v-if="!splashes" class="graph"></div>
+              <div class="a_selece graph">
+                    <h1>账户组情况概览</h1>
+                    <el-button type="primary" @click="splashesClick" size="small" class="button">{{detailCon3}}</el-button>
+                    <div v-show="isShowsplashes" id="splashes" style="width:100%; height:450px"></div>
+                    <div v-show="!isShowsplashes" class="barChartImg">
+                    <img src="../../assets/img/3.jpg" alt="">
+                    </div>
+              </div>
               <!--柱状图-->
               
               <div class="a_selece graph">
-                <h1 style="float: left;margin: 2px 20px 0px " >账户组浏览及合并</h1>
-                <el-button type="primary" @click="detailClick" size="small" style="float: right;margin: 2px 20px 0px ">{{detailCon}}</el-button>
+                <h1>持仓情况</h1>
+                <el-button type="primary" @click="barChartClick" size="small" class="button">{{detailCon1}}</el-button>
                 <!-- <el-select style="width: 30%"
                  v-model="value" placeholder="请选择">
                   <el-option
@@ -27,10 +33,10 @@
                     :value="item.value">
                   </el-option>
                 </el-select> -->
-                <div style="width:100%; height:400px" id="barChart"></div>
-                <!-- <div v-show="isShowDetail">
-                  erkwekwqe
-                </div> -->
+                <div v-show="isShowbarChart" style="width:100%; height:400px" id="barChart"></div>
+                <div v-show="!isShowbarChart" class="barChartImg">
+                  <img src="../../assets/img/1.jpg" alt="">
+                </div>
               </div>
               
           </div>
@@ -38,7 +44,14 @@
                 <!--K 线图-->
                 <div class="graph" id="candlestick"></div>
                 <!--雷达图-->
-                <div class="graph" id="radar"></div>
+                <div class="a_selece graph">
+                    <h1>分时图</h1>
+                    <el-button type="primary" @click="radarClick" size="small" class="button">{{detailCon2}}</el-button>
+                    <div v-show="isShowradar" id="radar" style="width:100%; height:450px"></div>
+                    <div v-show="!isShowradar" class="barChartImg">
+                    <img src="../../assets/img/2.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -73,8 +86,12 @@ export default {
       value: "",
       echartsData: [120, 200, 150, 80, 70, 110, 130],
       echartsNum: [220, 230, 150, 80, 70, 110, 130],
-      detailCon: "明细",
-      isShowDetail: true
+      detailCon1: "明细",
+      detailCon2: "明细",
+      detailCon3: "明细",
+      isShowbarChart: true,
+      isShowradar: true,
+      isShowsplashes: true
     };
   },
   // 计算属性
@@ -82,15 +99,17 @@ export default {
   watch: {},
   methods: {
     // detailClick() {},
-    detailClick() {
-      console.log(3333);
-      this.isShowDetail = !this.isShowDetail;
-
-      if (this.isShowDetail) {
-        this.detailCon = "显示柱状图";
-      } else {
-        this.detailCon = "明细";
-      }
+    barChartClick() {
+      this.isShowbarChart = !this.isShowbarChart;
+      this.detailCon1 = this.isShowbarChart ? '明细' : '可视化';
+    },
+    radarClick() {
+      this.isShowradar = !this.isShowradar;
+      this.detailCon2 = this.isShowradar ? '明细' : '可视化';
+    },
+    splashesClick() {
+      this.isShowsplashes = !this.isShowsplashes;
+      this.detailCon3 = this.isShowsplashes ? '明细' : '可视化';
     }
   },
   mounted() {
@@ -104,27 +123,50 @@ export default {
 
 <style lang="less" scoped>
 .positionGrade {
-  border: 1px solid #dcd5d3;
-  width: 100%;
-  margin-top: 35px;
-  // }
-  .h1 {
-    margin: 0;
-    padding: 20px 0 0 20px;
-  }
-  .echars {
+    border: 1px solid #dcd5d3;
+    width: 100%;
+    margin-top: 35px;
+}
+.h1 {
+margin: 0;
+padding: 20px 0 0 20px;
+}
+.echars {
     width: 100%;
     .echarsBox {
-      display: flex;
-      .graph {
-        width: calc(100% / 2);
-        height: 450px;
-        border: 1px solid #e0dcdc;
-        margin: 20px;
-
-        // color: #72ACD1
-      }
+        display: flex;
+        .graph {
+            width: 50%;
+            height: 450px;
+            border: 1px solid #e0dcdc;
+            margin: 20px;
+        }
     }
-  }
+}
+
+.a_selece {
+    position: relative;
+
+    h1 {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        margin: 0;
+        z-index: 10;
+    }
+}
+
+.button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+.barChartImg {
+    padding: 80px 20px 0 20px;
+    img { 
+        width: 100%;
+    }
 }
 </style>

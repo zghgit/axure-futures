@@ -29,14 +29,14 @@ export default {
                     color: '#cdd0d5'
                 }]),
                 title: {
-                    text: '账户组情况概览'
+                    text: ''
                 },
                 legend: {
                     right: 10,
-                    data: ['相关程度', '持仓量等级']
+                    data: ['相关程度', '账户组浏览及合并']
                 },
                 xAxis: {
-                    name: '持仓量等级',
+                    name: '持仓量',
                     splitLine: {
                         lineStyle: {
                             type: 'dashed'
