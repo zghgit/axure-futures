@@ -140,6 +140,13 @@ export default {
                 let option1 = window.barChartId.getOption();
                 window.barChartId.clear();
                 window.barChartId.setOption(option1);
+                let option2 = window.radarId.getOption();
+                window.radarId.clear();
+                window.radarId.setOption(option2);
+                let option3 = window.candlestickId.getOption();
+                window.candlestickId.clear();
+                window.candlestickId.setOption(option3);
+                // window.candlestickId
                 // this.candlestickData();
             });
         },

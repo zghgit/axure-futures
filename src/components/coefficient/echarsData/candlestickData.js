@@ -2,7 +2,7 @@ export default {
     methods: {
         // K 线图
         candlestickData() {
-            let candlestickId = this.$echarts.init(
+            window.candlestickId = this.$echarts.init(
                 document.getElementById("candlestick")
             );
             var data = splitData([

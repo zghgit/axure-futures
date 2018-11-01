@@ -2,7 +2,7 @@ export default {
     methods: {
         // 雷达图
         radarData() {
-            let radarId = this.$echarts.init(document.getElementById("radar"));
+            window.radarId = this.$echarts.init(document.getElementById("radar"));
             var data = splitData([
                 ["2015-10-16", 18.4, 18.58, 18.33, 18.79, 67.0, 1, 0.04, 0.11, 0.09],
                 ["2015-10-19", 18.56, 18.25, 18.19, 18.56, 55.0, 0, -0.0, 0.08, 0.09],
