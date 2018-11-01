@@ -4,7 +4,8 @@
         <div class="echars">
           <div class="echarsBox">
               <!--散点图-->
-              <div class="graph" id="splashes"></div>
+              <div v-if="splashes" class="graph" id="splashes"></div>
+              <div v-if="!splashes" class="graph"></div>
               <!--柱状图-->
               <div class="graph" id="barChart"></div>
           </div>
@@ -26,6 +27,7 @@
         // mixins: [],
         data() {
             return {
+                splashes: true,
                 echartsData:  [120, 200, 150, 80, 70, 110, 130],
                 echartsNum:  [220, 230, 150, 80, 70, 110, 130]
             };
@@ -584,7 +586,7 @@ function calculateMA(dayCount) {
             .echarsBox{
                 display: flex;
                 .graph{
-                    width: calc(100% / 2);
+                    width: 50%;
                     height: 450px;
                     border: 1px solid #e0dcdc;
                     margin: 20px;

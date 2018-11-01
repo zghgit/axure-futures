@@ -2,8 +2,9 @@
     <el-container class="app-container">
         <el-header>科技监管平台</el-header>
         <el-container>
-            <el-aside width="200px">
-                <el-menu router  :collapse="isCollapse">
+            <el-aside width="auto">
+                <!-- <div class="switch"><span @click="handleCollapse">关</span></div> -->
+                <el-menu router :collapse="isCollapse">
                     <template v-for="(item, index) in $router.options.routes">
 
                         <!-- 无二级子节点 -->
@@ -53,10 +54,17 @@
 </template>
 
 <script>
+import $ from 'jquery';
     export default {
         data() {
             return {
-                isCollapse: false
+                isCollapse: true
+            }
+        },
+        methods: {
+            handleCollapse() {
+                this.isCollapse = !this.isCollapse;
+                $('.switch span').text(this.isCollapse ? '开': '关');
             }
         }
     };
@@ -85,6 +93,15 @@
                 height: 100%;
             }
         }
+    }
+
+    .switch {
+        text-align: right;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        padding: 10px 25px;
+        cursor: pointer;
     }
 }
 
