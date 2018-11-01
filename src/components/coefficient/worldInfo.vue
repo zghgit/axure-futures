@@ -63,10 +63,18 @@
                     </el-col>
                 </el-col>
                 <el-col :span="24" class="function">
-                     <el-button type="success" @click="amendClick" size="small">修改</el-button>
-                     <el-button type="primary" @click="addDiscernIndexClick" size="small">新增识别指标</el-button>
-                     <el-button type="primary" @click="addSceneClick" size="small">新增场景</el-button>
-                </el-col>
+                     <el-col :span="7">
+                        <el-form-item label="前" prop="account"> 
+                            <el-input style="width:30%" v-model="form.account" placeholder="请输账户数"></el-input>
+                        <span>个账户</span>
+                        </el-form-item>
+                    </el-col>
+                    <el-col  :span="7">
+                        <el-button type="success" @click="amendClick" size="small">修改</el-button>
+                        <el-button type="primary" @click="addDiscernIndexClick" size="small">新增识别指标</el-button>
+                        <el-button type="primary" @click="addSceneClick" size="small">新增场景</el-button>
+                    </el-col>
+                      </el-col>
             </el-row>
         </el-form>
         <create :visible="dialogVisible" @close="handleClose"></create>
@@ -74,66 +82,63 @@
 </template>
 
 <script>
-    import create from '@/components/coefficient/create/index'
-    export default {
-        name: 'Coefficient',
-        components: {create},
-        data() {
-            return {
-                form: {
-                    name: '',       // 场景名称
-                    remark: '',     // 场景备注
-                    several: '',    // 持仓排名前
-                    contract: 'cu1811',   // 合约
-                    clients: '',    // 客户列表
-                    standard: '',   // 识别标准
-                    variety: '黄金',    // 品种
-                    startDate: '',  // 开始日期
-                    endDate: ''     // 结束日期
-                },
-                startDate: '',
-                endDate: '',
-                dialogVisible: false
-            };
-        },
-        computed: {
-           
-        },
-        mounted() {
-
-        },
-        methods: {
-            // 修改
-            amendClick() {},
-            // 新增识别指标
-            addDiscernIndexClick() {},
-            // 新增场景
-            addSceneClick() {
-                this.dialogVisible = true;
-            },
-            handleClose() {
-                this.dialogVisible = false;
-            }
-        }
+import create from "@/components/coefficient/create/index";
+export default {
+  name: "Coefficient",
+  components: { create },
+  data() {
+    return {
+      form: {
+        name: "", // 场景名称
+        remark: "", // 场景备注
+        several: "", // 持仓排名前
+        contract: "cu1811", // 合约
+        clients: "", // 客户列表
+        standard: "", // 识别标准
+        variety: "黄金", // 品种
+        startDate: "", // 开始日期
+        endDate: "", // 结束日期
+        account: "10" // 前几个账户
+      },
+      startDate: "",
+      endDate: "",
+      dialogVisible: false
+    };
+  },
+  computed: {},
+  mounted() {},
+  methods: {
+    // 修改
+    amendClick() {},
+    // 新增识别指标
+    addDiscernIndexClick() {},
+    // 新增场景
+    addSceneClick() {
+      this.dialogVisible = true;
+    },
+    handleClose() {
+      this.dialogVisible = false;
     }
+  }
+};
 </script>
 
 <style lang="less">
-    .worldInfo {
-            border: 1px solid #dcd5d3;
-            width: 100%;
-            margin-top: 35px;
-            .h1{
-                margin: 0;
-                padding: 20px 0 0 20px;
-            }
-        .formBox{
-            padding: 20px 0;
-            .function{
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 20px;
-            }
-        }
+.worldInfo {
+  border: 1px solid #dcd5d3;
+  width: 100%;
+  margin-top: 35px;
+  .h1 {
+    margin: 0;
+    padding: 20px 0 0 20px;
+  }
+  .formBox {
+    padding: 20px 0;
+    .function {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
     }
+  }
+}
 </style>
