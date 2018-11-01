@@ -103,29 +103,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-<<<<<<< HEAD
-    .positionGrade {
-        border: 1px solid #dcd5d3;
-        width: 100%;
-        margin-top: 35px;
-        .h1{
-            margin: 0;
-            padding: 20px 0 0 20px;
-        }
-        .echars{
-           width: 100%;
-            .echarsBox{
-                display: flex;
-                .graph{
-                    width: 50%;
-                    height: 450px;
-                    border: 1px solid #e0dcdc;
-                    margin: 20px;
-
-                    // color: #72ACD1
-                }
-            }
-=======
 .positionGrade {
   border: 1px solid #dcd5d3;
   width: 100%;
@@ -144,7 +121,6 @@ export default {
         height: 450px;
         border: 1px solid #e0dcdc;
         margin: 20px;
->>>>>>> 04e9541a34d69153462bc76787ce03ba37aae7d8
 
         // color: #72ACD1
       }
