@@ -94,6 +94,7 @@ export default {
       isShowsplashes: true
     };
   },
+
   // 计算属性
   computed: {},
   watch: {},
@@ -101,15 +102,15 @@ export default {
     // detailClick() {},
     barChartClick() {
       this.isShowbarChart = !this.isShowbarChart;
-      this.detailCon1 = this.isShowbarChart ? '明细' : '可视化';
+      this.detailCon1 = this.isShowbarChart ? "明细" : "可视化";
     },
     radarClick() {
       this.isShowradar = !this.isShowradar;
-      this.detailCon2 = this.isShowradar ? '明细' : '可视化';
+      this.detailCon2 = this.isShowradar ? "明细" : "可视化";
     },
     splashesClick() {
       this.isShowsplashes = !this.isShowsplashes;
-      this.detailCon3 = this.isShowsplashes ? '明细' : '可视化';
+      this.detailCon3 = this.isShowsplashes ? "明细" : "可视化";
     }
   },
   mounted() {
@@ -123,50 +124,50 @@ export default {
 
 <style lang="less" scoped>
 .positionGrade {
-    border: 1px solid #dcd5d3;
-    width: 100%;
-    margin-top: 35px;
+  border: 1px solid #dcd5d3;
+  width: 100%;
+  margin-top: 35px;
 }
 .h1 {
-margin: 0;
-padding: 20px 0 0 20px;
+  margin: 0;
+  padding: 20px 0 0 20px;
 }
 .echars {
-    width: 100%;
-    .echarsBox {
-        display: flex;
-        .graph {
-            width: 50%;
-            height: 450px;
-            border: 1px solid #e0dcdc;
-            margin: 20px;
-        }
+  width: 100%;
+  .echarsBox {
+    display: flex;
+    .graph {
+      width: 50%;
+      height: 450px;
+      border: 1px solid #e0dcdc;
+      margin: 20px;
     }
+  }
 }
 
 .a_selece {
-    position: relative;
+  position: relative;
 
-    h1 {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        margin: 0;
-        z-index: 10;
-    }
+  h1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    z-index: 10;
+  }
 }
 
 .button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 10;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
 }
 
 .barChartImg {
-    padding: 80px 20px 0 20px;
-    img { 
-        width: 100%;
-    }
+  padding: 80px 20px 0 20px;
+  img {
+    width: 100%;
+  }
 }
 </style>
