@@ -577,7 +577,6 @@ export default {
                         data: data.macds,
                         itemStyle: {
                             normal: {
-
                                 color: function (params) {
                                     var colorList;
                                     if (params.data >= 0) {
@@ -608,6 +607,8 @@ export default {
             };
             radarId.setOption(option);
         }
+
+
         // radarData() {
         //     let radarId = this.$echarts.init(document.getElementById("radar"));
         //     let option = {
