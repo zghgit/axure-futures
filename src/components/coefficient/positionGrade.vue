@@ -86,7 +86,7 @@ export default {
       value: "",
       echartsData: [120, 200, 150, 80, 70, 110, 130],
       echartsNum: [220, 230, 150, 80, 70, 110, 130],
-      detailCon1: "明细",
+      detailCon1: "明细11111",
       detailCon2: "明细",
       detailCon3: "明细",
       isShowbarChart: true,
