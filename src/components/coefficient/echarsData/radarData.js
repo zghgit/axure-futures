@@ -577,6 +577,7 @@ export default {
                         data: data.macds,
                         itemStyle: {
                             normal: {
+
                                 color: function (params) {
                                     var colorList;
                                     if (params.data >= 0) {
