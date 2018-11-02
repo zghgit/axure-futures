@@ -595,6 +595,7 @@ export default {
                         xAxisIndex: 2,
                         yAxisIndex: 2,
                         data: data.difs
+
                     },
                     {
                         name: "DEA",
