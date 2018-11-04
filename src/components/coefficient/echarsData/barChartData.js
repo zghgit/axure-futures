@@ -77,7 +77,7 @@ export default {
                                     {
                                         yAxis: '3000',
                                         symbol: 'none',
-                                        x: '90%'
+                                        x: '93%'
                                     }
                                 ]
                             ]
@@ -120,7 +120,7 @@ export default {
                                     {
                                         yAxis: '3000',
                                         symbol: 'none',
-                                        x: '90%'
+                                        x: '93%'
                                     }
                                 ]
                             ]
@@ -163,7 +163,7 @@ export default {
                                     {
                                         yAxis: '3000',
                                         symbol: 'none',
-                                        x: '90%'
+                                        x: '93%'
                                     }
                                 ]
                             ]
