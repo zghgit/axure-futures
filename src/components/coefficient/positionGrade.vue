@@ -120,7 +120,6 @@ export default {
         height: 450px;
         border: 1px solid #e0dcdc;
         margin: 20px;
-
         // color: #72ACD1
       }
     }
